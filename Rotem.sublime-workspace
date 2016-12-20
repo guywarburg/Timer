@@ -1,0 +1,465 @@
+{
+	"auto_complete":
+	{
+		"selected_items":
+		[
+			[
+				"mus",
+				"musicOn"
+			],
+			[
+				"stopMusic",
+				"stopMusic"
+			],
+			[
+				"rotem",
+				"rotem-music"
+			],
+			[
+				"fun",
+				"function"
+			],
+			[
+				"co",
+				"color"
+			],
+			[
+				"bar",
+				"background"
+			],
+			[
+				"bor",
+				"border-bottom"
+			],
+			[
+				"center",
+				"centerPart"
+			],
+			[
+				"mai",
+				"mainImg"
+			],
+			[
+				"mar",
+				"margin-top"
+			],
+			[
+				"cen",
+				"centerPart"
+			],
+			[
+				"margin-",
+				"margin-bottom"
+			],
+			[
+				"na",
+				"navBar"
+			],
+			[
+				"tex",
+				"text-align"
+			],
+			[
+				"pa",
+				"padding-top"
+			],
+			[
+				"ma",
+				"margin-top"
+			],
+			[
+				"bord",
+				"border-bottom"
+			],
+			[
+				"hea",
+				"header	Tag"
+			],
+			[
+				"font",
+				"font-size"
+			],
+			[
+				"fo",
+				"font-weight"
+			],
+			[
+				"i",
+				"italic"
+			],
+			[
+				"marg",
+				"margin-top"
+			],
+			[
+				"border",
+				"border-radius"
+			],
+			[
+				"pad",
+				"padding-top"
+			],
+			[
+				"bo",
+				"border-left"
+			],
+			[
+				"width",
+				"width"
+			],
+			[
+				"padd",
+				"padding-top"
+			],
+			[
+				"margin",
+				"margin-top"
+			],
+			[
+				"n",
+				"navBar"
+			],
+			[
+				"p",
+				"padding-left"
+			],
+			[
+				"widt",
+				"width"
+			],
+			[
+				"in",
+				"inline-block"
+			],
+			[
+				"b",
+				"inline-block"
+			],
+			[
+				"di",
+				"display"
+			],
+			[
+				"wid",
+				"width"
+			],
+			[
+				"ali",
+				"vertical-align"
+			],
+			[
+				"bac",
+				"background-color"
+			],
+			[
+				"div",
+				"div	Tag"
+			]
+		]
+	},
+	"buffers":
+	[
+		{
+			"file": "index.html",
+			"settings":
+			{
+				"buffer_size": 3332,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"contents": "<!DOCTYPE html>\n<html>\n<head>\n	<meta charset=\"utf-8\">\n	<meta http-equiv=\"X-UA-Compatible\" content=\"IE=Edge\">\n	<meta name=\"viewport\" content=\"width=device-width, initial-scale=1\">	\n	<link rel=\"stylesheet\" href=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css\" integrity=\"sha384-BVYiiSIFeK1dGmJRAkycuHAHRg32OmUcww7on3RYdg4Va+PmSTsz/K68vbdEjh4u\" crossorigin=\"anonymous\">\n	<link rel=\"stylesheet\" href=\"../styles/style.css\">\n	<title>Timer</title>\n	<link rel=\"shortcut icon\" href=\"\" type=\"image/png\" />\n</head>\n<body>\n<!--  NavBar   -->\n	<nav class=\"navbar navbar-default text-right\" role=\"navigation\">\n        <div class=\"container\">\n            <div class=\"navbar-header\">\n                <button type=\"button\" class=\"navbar-toggle collapsed\" data-toggle=\"collapse\" data-target=\"#collapsemenu\">\n                    <span class=\"sr-only\">Toggle navigation</span>\n                    <span class=\"icon-bar\"></span>\n                    <span class=\"icon-bar\"></span>\n                    <span class=\"icon-bar\"></span>\n                </button>\n                <a class=\"navbar-brand\" href=\"../index.html\">\n                	<p>Timer</p>\n                </a>\n            </div><!-- navbar-header -->\n            <div class=\"collapse navbar-collapse navbar-right\" id=\"collapsemenu\">\n                <ul class=\"nav navbar-nav\">\n                    <li><a href=\"../index.html\">Home</a></li>\n                    <li  class=\"active\"> <!-- Dropdown -->\n                    	<div class=\"dropdown\">\n						  <button class=\"btn dropdown-toggle navbar-btn\" type=\"button\" data-toggle=\"dropdown\">Books\n						  <span class=\"caret\"></span></button>\n						  <ul class=\"dropdown-menu\">\n						    <li><a href=\"#\">Book 1</a></li>\n						    <li><a href=\"#\">Book 2</a></li>\n						    <li><a href=\"#\">Book 3</a></li>\n						  </ul>\n						</div>\n                    </li>\n                    <li><a href=\"#merch\">Merch</a></li>\n                    <li><a href=\"#blog\">Blog</a></li>\n                    <li><a href=\"#about\">About</a></li>\n                </ul>\n            </div><!-- collapse navbar-collapse -->\n        </div><!-- container -->\n    </nav>\n<!-- Carousel -->\n\n<div id=\"myCarousel\" class=\"carousel slide\" data-ride=\"carousel\">\n  <!-- Indicators -->\n  <ol class=\"carousel-indicators\">\n    <li data-target=\"#myCarousel\" data-slide-to=\"0\" class=\"active\"></li>\n    <li data-target=\"#myCarousel\" data-slide-to=\"1\"></li>\n    <li data-target=\"#myCarousel\" data-slide-to=\"2\"></li>\n    <li data-target=\"#myCarousel\" data-slide-to=\"3\"></li>\n    <li data-target=\"#myCarousel\" data-slide-to=\"4\"></li>\n    <li data-target=\"#myCarousel\" data-slide-to=\"5\"></li>\n  </ol>\n\n  <!-- Wrapper for slides -->\n  <div class=\"carousel-inner\" role=\"listbox\">\n    <div class=\"item active\">\n      <img src=\"../images/img1.jpg\" alt=\"Cover\">\n    </div>\n    <div class=\"item rotem\">\n        <audio class=\"rotem-music\" style=\"margin-left:500px;\">\n            <source src=\"../media/Led Zeppelin - When The Levee Breaks.mp3\" type=\"audio/mpeg\" />\n            Your browser does not support HTML5 audio.\n        </audio>\n        <img id=\"play\" src=\"../images/img2.jpg\" alt=\"Nuke\" />\n    </div>\n    <div class=\"item\">\n      <img src=\"../images/img3.png\" alt=\"Tab\">\n    </div>\n    <div class=\"item\">\n      <img src=\"../images/img4.jpg\" alt=\"Joint\">\n    </div>\n    <div class=\"item\">\n      <img src=\"../images/img5.jpg\" alt=\"Joint\">\n    </div>\n    <div class=\"item\">\n      <img src=\"../images/img6.jpg\" alt=\"Joint\">\n    </div>\n  </div>\n\n  <!-- Left and right controls -->\n  <a class=\"left carousel-control\" href=\"#myCarousel\" role=\"button\" data-slide=\"prev\">\n    <span class=\"glyphicon glyphicon-chevron-left\" aria-hidden=\"true\"></span>\n    <span class=\"sr-only\">Previous</span>\n  </a>\n  <a class=\"right carousel-control\" href=\"#myCarousel\" role=\"button\" data-slide=\"next\">\n    <span class=\"glyphicon glyphicon-chevron-right\" aria-hidden=\"true\"></span>\n    <span class=\"sr-only\">Next</span>\n  </a>\n</div>\n\n<audio controls>\n  <source src=\"../media/Led Zeppelin - When The Levee Breaks.mp3\" type=\"audio/mpeg\">\n  Your browser does not support the audio tag.\n</audio>\n<!--  Scripts   -->\n	<script src=\"https://ajax.googleapis.com/ajax/libs/jquery/3.1.1/jquery.min.js\"></script>\n	<script src=\"https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js\" integrity=\"sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa\" crossorigin=\"anonymous\"></script>\n	<script type=\"text/javascript\" src=\"script.js\"></script>\n</body>\n</html>",
+			"file": "book1/book1.html",
+			"file_size": 4235,
+			"file_write_time": 1482156828000000,
+			"settings":
+			{
+				"buffer_size": 4510,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "styles/style.css",
+			"settings":
+			{
+				"buffer_size": 85,
+				"line_ending": "Unix"
+			}
+		},
+		{
+			"file": "book1/script.js",
+			"settings":
+			{
+				"buffer_size": 820,
+				"line_ending": "Unix"
+			}
+		}
+	],
+	"build_system": "",
+	"command_palette":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"console":
+	{
+		"height": 125.0
+	},
+	"distraction_free":
+	{
+		"menu_visible": true,
+		"show_minimap": false,
+		"show_open_files": false,
+		"show_tabs": false,
+		"side_bar_visible": false,
+		"status_bar_visible": false
+	},
+	"file_history":
+	[
+		"/Users/guywarburg/Programming/ROTEM/Rotem.sublime-project",
+		"/Users/guywarburg/spark/app.js",
+		"/Users/guywarburg/spark/config/default.js",
+		"/Users/guywarburg/Programming/RSVP Events/RSVP.html",
+		"/Users/guywarburg/Programming/Landing Pages/RSVP.html",
+		"/Users/guywarburg/Programming/ROTEM/index.html",
+		"/Users/guywarburg/Programming/RSVP Events/script.js",
+		"/Users/guywarburg/Programming/ROTEM/book1/book1.html",
+		"/Users/guywarburg/Programming/ROTEM/styles/style.css",
+		"/Users/guywarburg/Programming/Landing Pages/RSVP - Proj.sublime-project"
+	],
+	"find":
+	{
+		"height": 35.0
+	},
+	"find_in_files":
+	{
+		"height": 0.0,
+		"where_history":
+		[
+		]
+	},
+	"find_state":
+	{
+		"case_sensitive": false,
+		"find_history":
+		[
+			"centerPa",
+			"200px",
+			"header",
+			"dir",
+			"h3",
+			"col-md-2",
+			"text-center col-sm-4 col-xs-12",
+			"src",
+			"small",
+			"col-sm-6 col-xs-12",
+			"bizOptions",
+			"navKey",
+			"a",
+			";\n"
+		],
+		"highlight": true,
+		"in_selection": false,
+		"preserve_case": false,
+		"regex": false,
+		"replace_history":
+		[
+		],
+		"reverse": false,
+		"show_context": true,
+		"use_buffer2": true,
+		"whole_word": false,
+		"wrap": false
+	},
+	"groups":
+	[
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 0,
+					"file": "index.html",
+					"settings":
+					{
+						"buffer_size": 3332,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 1,
+					"file": "book1/book1.html",
+					"settings":
+					{
+						"buffer_size": 4510,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								3459,
+								3459
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/HTML/HTML.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 1533.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		},
+		{
+			"selected": 1,
+			"sheets":
+			[
+				{
+					"buffer": 2,
+					"file": "styles/style.css",
+					"settings":
+					{
+						"buffer_size": 85,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								0,
+								0
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/CSS/CSS.tmLanguage"
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				},
+				{
+					"buffer": 3,
+					"file": "book1/script.js",
+					"settings":
+					{
+						"buffer_size": 820,
+						"regions":
+						{
+						},
+						"selection":
+						[
+							[
+								476,
+								476
+							]
+						],
+						"settings":
+						{
+							"syntax": "Packages/JavaScript/JavaScript.tmLanguage",
+							"tab_size": 2,
+							"translate_tabs_to_spaces": true
+						},
+						"translation.x": 0.0,
+						"translation.y": 0.0,
+						"zoom_level": 1.0
+					},
+					"type": "text"
+				}
+			]
+		}
+	],
+	"incremental_find":
+	{
+		"height": 0.0
+	},
+	"input":
+	{
+		"height": 0.0
+	},
+	"layout":
+	{
+		"cells":
+		[
+			[
+				0,
+				0,
+				1,
+				1
+			],
+			[
+				1,
+				0,
+				2,
+				1
+			]
+		],
+		"cols":
+		[
+			0.0,
+			0.348690533101,
+			1.0
+		],
+		"rows":
+		[
+			0.0,
+			1.0
+		]
+	},
+	"menu_visible": true,
+	"replace":
+	{
+		"height": 0.0
+	},
+	"save_all_on_build": true,
+	"select_file":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"select_project":
+	{
+		"height": 0.0,
+		"selected_items":
+		[
+		],
+		"width": 0.0
+	},
+	"show_minimap": true,
+	"show_open_files": true,
+	"show_tabs": true,
+	"side_bar_visible": true,
+	"side_bar_width": 150.0,
+	"status_bar_visible": true
+}
