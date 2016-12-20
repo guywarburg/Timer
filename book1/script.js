@@ -36,3 +36,5 @@ add a test for if the music is on
 
 call the function in every slide with music and have it receive a start time.*/
  var a = 0;
+
+ var b = 1;
