@@ -18,28 +18,35 @@ $(function(){
 
 var slides = [  
 	{  
-		id: 41,
+		id: "img2",
 		song: "",
 		class_name: "",
 		start_time: 0,
 		blink: 0
 	},
 	{  
-	 	id: 42,
+	 	id: "img3",
 	 	song: "Bob Dylan - Mr. Tambourine Man.mp3",
 		class_name: "music",
 		start_time: 0,
 		blink: 30000
 	},
 	{
-	 	id: 43,
+	 	id: "img4",
 	 	song: "Bob Dylan - Mr. Tambourine Man.mp3",
 	 	class_name: "music",
 	 	start_time: 30000,
 	 	blink: 60000
 	},
 	{
-	 	id: 44,
+	 	id: "img5",
+	 	song: "",
+		class_name: "",
+		start_time: 0,
+		blink: 0
+	},
+	{
+	 	id: "img6",
 	 	song: "",
 		class_name: "",
 		start_time: 0,
@@ -54,7 +61,7 @@ var populateCarousel = function(){
 		// 	classes += " active";
 		// }
 		var newDiv = '<div class="' + classes + '" id="' + slides[i].id + '"></div>';
-		var newImg = '../images/Comics/' + slides[i].id + '.jpg';
+		var newImg = 'images/' + slides[i].id + '.jpg';
 		$('<div/>',{
     		'id'    : slides[i].id,
     		'class' : classes
