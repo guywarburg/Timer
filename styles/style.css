@@ -4,3 +4,15 @@ p {
 	font-weight: bold;
 	font-size: 48px;
 }
+
+.blink {
+	animation-name: blink;
+    animation-duration: 0.5s;
+    animation-iteration-count: infinite;
+    animation-direction: alternate;
+}
+
+@keyframes blink {
+    from {color: white;}
+    to {color: #ef310b;}
+}

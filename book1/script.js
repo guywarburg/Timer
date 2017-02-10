@@ -7,13 +7,25 @@ $(function(){
 
 var musicOn = false;
 
+function blink(time) {
+  window.setTimeout(function(){
+  $('.right').addClass('blink');
+  }, time);
+}
 //Starts music
 function playClip(){
+  if($('.right').hasClass('blink')){
+    $('.right').removeClass('blink');
+  }
+  if($('.stop').hasClass('active') && musicOn){
+    $('.rotem-music').get(0).pause();
+    musicOn = false;
+  }
     if($('.rotem').hasClass('active') && !musicOn){
-		 //$('.rotem-music').get(0).currentTime = 65;
-         $('.rotem-music').get(0).play();
-         musicOn = true;
-         stopMusic(".rotem-music", 5000);
+		  //$('.rotem-music').get(0).currentTime = 65;
+      $('.rotem-music').get(0).play();
+      musicOn = true;
+      blink(30000); //TODO - bring time from JSON
     }
 }
 
@@ -24,7 +36,9 @@ function stopMusic(name, time){
    console.log('timer set');
 }
 
-window.setInterval(playClip,1000); // Check if relevant slide is active
+$('.carousel-control').click(playClip);
+
+// window.setInterval(playClip,1000); // Check if relevant slide is active
 
 /* Psuedo - for script:
 
@@ -35,6 +49,3 @@ Have a stopmusic function
 add a test for if the music is on
 
 call the function in every slide with music and have it receive a start time.*/
- var a = 0;
-
- var b = 1;
