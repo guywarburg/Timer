@@ -57,7 +57,7 @@ var slides = [
 var populateCarousel = function(){
 	for(var i = 0; i < slides.length; i++){
 		var classes = "item " + slides[i].class_name;
-		// if (i === 0) {
+		// if (i === 0) { 			// To avoid loading time I pre-load manually the first slide.
 		// 	classes += " active";
 		// }
 		var newDiv = '<div class="' + classes + '" id="' + slides[i].id + '"></div>';
@@ -78,6 +78,7 @@ populateCarousel();
 
 var musicOn = false;
 var slideNum = -1; // Although index 0, the first slide is manually generated.
+var blinkTimeout;
 
 //Call event on page flip
 $('#myCarousel').on('slid.bs.carousel', function(){
@@ -93,11 +94,14 @@ $('.left').click(function(){
 	slideNum--;
 });
 
-// Music hnadler
+// Music handler
+// for each new slides this function checks and plays music if necessary 
+// sets timeout for blink to show reader when to move to next slide.
 function music() {
 
-	//TODO - add start_time consideration for cases when we jump to slide.
+	// TODO - add start_time consideration for cases when we jump to slide.
 	// TODO - dynamically choose song
+
 	// Get current music time
 	var musicTime = 0;
 	if(musicOn) {
@@ -112,10 +116,9 @@ function music() {
 
 	// Music is required but already playing
 	if($('.active').hasClass('music') && musicOn) {
-		
+		// set timeout time according to current music time.
 		var blinkTime = slides[slideNum].blink - musicTime;
-
-		console.log('blink is: ' + slides[slideNum].blink + 'blinkTime: ' + blinkTime);
+		console.log('blink is: ' + slides[slideNum].blink + ' blinkTime: ' + blinkTime);
 		setBlink(blinkTime);
 	} // Music is required and not yet playing 
 	else if($('.music').hasClass('active') && !musicOn) {
@@ -126,24 +129,32 @@ function music() {
 		musicOn = true;
 	} // no music required
 	else {
-		stopMusic();
+		if(musicOn){
+			stopMusic();
+		}
 		musicOn = false;
 	}
 }
 
+// Adds blink animation to right control after given time.
 function setBlink(time) {
-	setTimeout(function(){
+	blinkTimeout = setTimeout(function(){
 		console.log('blink started');
 		$('.right').addClass('blink');
 	}, time);
 }
 
+// Clears previous blinkTimeouts and removes currently active blink animation.
 function stopBlink(time) {
+	if(blinkTimeout){
+		window.clearTimeout(blinkTimeout);
+	}
 	if($('.right').hasClass('blink')){
     	$('.right').removeClass('blink');
   }
 }
 
+// Fades-in music
 var startMusic = function(){
 	if($('.rotem-music').get(0).volume === 0) { 
 		$('.rotem-music').animate({volume: 1}, 2000);
@@ -152,6 +163,7 @@ var startMusic = function(){
 	console.log('Music started!');
 };
 
+// Fades-out music.
 var stopMusic = function(){
 	console.log('Stop Music!!!');
 	$('.rotem-music').animate({volume: 0}, 2000);
@@ -160,3 +172,19 @@ var stopMusic = function(){
 	}, 2000);
 };
 
+window.onload = function() {
+	var h = window.innerHeight;
+	// Give image containers the current window height 
+	// in order to contain image within window height.
+	$('.item').css('height', h);
+
+	// Add zoom functionality to images.
+	$('img').click(function(){
+		$(this).toggleClass('zoom');
+		if ($(this).hasClass('zoom')){
+			$('.item').css('height', '');
+		} else {
+			$('.item').css('height', h);
+		}
+	})
+}
